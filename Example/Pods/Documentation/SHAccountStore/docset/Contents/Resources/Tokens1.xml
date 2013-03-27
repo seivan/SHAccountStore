@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SHAccount.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SHAccount</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHAccount.h</DeclaredIn>
+			
+			<NodeRef refid="1"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SHAccount/initWithAccountType:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHAccount.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithAccountType:(SHAccountType *)type</Declaration>
+			
+			
+			<Anchor>//api/name/initWithAccountType:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SHAccount/setIdentifier:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHAccount.h</DeclaredIn>			
+			
+			<Declaration>@property (NS_NONATOMIC_IOSONLY, copy, readonly) NSString *identifier</Declaration>
+			
+			
+			<Anchor>//api/name/identifier</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SHAccount/identifier</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHAccount.h</DeclaredIn>			
+			
+			<Declaration>@property (NS_NONATOMIC_IOSONLY, copy, readonly) NSString *identifier</Declaration>
+			
+			
+			<Anchor>//api/name/identifier</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SHAccount/setAccountType:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHAccount.h</DeclaredIn>			
+			
+			<Declaration>@property (NS_NONATOMIC_IOSONLY, strong) SHAccountType *accountType</Declaration>
+			
+			
+			<Anchor>//api/name/accountType</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SHAccount/accountType</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHAccount.h</DeclaredIn>			
+			
+			<Declaration>@property (NS_NONATOMIC_IOSONLY, strong) SHAccountType *accountType</Declaration>
+			
+			
+			<Anchor>//api/name/accountType</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SHAccount/setAccountDescription:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHAccount.h</DeclaredIn>			
+			
+			<Declaration>@property (NS_NONATOMIC_IOSONLY, copy) NSString *accountDescription</Declaration>
+			
+			
+			<Anchor>//api/name/accountDescription</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SHAccount/accountDescription</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHAccount.h</DeclaredIn>			
+			
+			<Declaration>@property (NS_NONATOMIC_IOSONLY, copy) NSString *accountDescription</Declaration>
+			
+			
+			<Anchor>//api/name/accountDescription</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SHAccount/setUsername:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHAccount.h</DeclaredIn>			
+			
+			<Declaration>@property (NS_NONATOMIC_IOSONLY, copy) NSString *username</Declaration>
+			
+			
+			<Anchor>//api/name/username</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SHAccount/username</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHAccount.h</DeclaredIn>			
+			
+			<Declaration>@property (NS_NONATOMIC_IOSONLY, copy) NSString *username</Declaration>
+			
+			
+			<Anchor>//api/name/username</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SHAccount/setCredential:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHAccount.h</DeclaredIn>			
+			
+			<Declaration>@property (NS_NONATOMIC_IOSONLY, strong) SHAccountCredential *credential</Declaration>
+			
+			
+			<Anchor>//api/name/credential</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SHAccount/credential</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHAccount.h</DeclaredIn>			
+			
+			<Declaration>@property (NS_NONATOMIC_IOSONLY, strong) SHAccountCredential *credential</Declaration>
+			
+			
+			<Anchor>//api/name/credential</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

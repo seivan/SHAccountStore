@@ -65,9 +65,9 @@
   NSString * username = self.username ? self.username : @"";
   
   return @{ @"account.identifier" : identifier,
-           @"account.accountType" : accountType,
-           @"account.accountDescription" : accountDescription,
-           @"account.username" : username
+            @"account.accountType" : accountType,
+            @"account.accountDescription" : accountDescription,
+            @"account.username" : username
             }.description;
 }
 

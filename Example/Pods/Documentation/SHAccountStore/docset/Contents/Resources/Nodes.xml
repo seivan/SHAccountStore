@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DocSetNodes version="1.0">
+    <TOC>
+        <Node type="folder">
+            <Name>SHAccountStore 0.0.1</Name>
+            <Path>index.html</Path>
+			<Subnodes>
+                
+				
+				<Node type="folder">
+					<Name>Classes</Name>
+					<Path>index.html</Path>
+					<Subnodes>
+						<NodeRef refid="1"/>
+						<NodeRef refid="2"/>
+						<NodeRef refid="3"/>
+						<NodeRef refid="4"/>
+						
+					</Subnodes>
+				</Node>
+				
+				
+				
+			</Subnodes>
+        </Node>
+    </TOC>
+	<Library>
+		
+		<Node id="1">
+			<Name>SHAccount</Name>
+			<Path>Classes/SHAccount.html</Path>
+		</Node>
+		<Node id="2">
+			<Name>SHAccountCredential</Name>
+			<Path>Classes/SHAccountCredential.html</Path>
+		</Node>
+		<Node id="3">
+			<Name>SHAccountStore</Name>
+			<Path>Classes/SHAccountStore.html</Path>
+		</Node>
+		<Node id="4">
+			<Name>SHAccountType</Name>
+			<Path>Classes/SHAccountType.html</Path>
+		</Node>
+		
+		
+		
+	</Library>
+</DocSetNodes>

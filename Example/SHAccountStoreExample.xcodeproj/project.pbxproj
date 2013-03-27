@@ -18,6 +18,7 @@
 		222076931702F13D00C1FEDD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 222076921702F13D00C1FEDD /* Default-568h@2x.png */; };
 		222076961702F13D00C1FEDD /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 222076941702F13D00C1FEDD /* MainStoryboard.storyboard */; };
 		222076991702F13D00C1FEDD /* SHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 222076981702F13D00C1FEDD /* SHViewController.m */; };
+		36C5373DE8C74E5F86895BE9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF141EBBC11A4570BA986F04 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		222076951702F13D00C1FEDD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		222076971702F13D00C1FEDD /* SHViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHViewController.h; sourceTree = "<group>"; };
 		222076981702F13D00C1FEDD /* SHViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHViewController.m; sourceTree = "<group>"; };
+		7DD4428512844FE2B486B933 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		FF141EBBC11A4570BA986F04 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +50,7 @@
 				2220767D1702F13C00C1FEDD /* UIKit.framework in Frameworks */,
 				2220767F1702F13C00C1FEDD /* Foundation.framework in Frameworks */,
 				222076811702F13C00C1FEDD /* CoreGraphics.framework in Frameworks */,
+				36C5373DE8C74E5F86895BE9 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +63,7 @@
 				222076821702F13C00C1FEDD /* SHAccountStoreExample */,
 				2220767B1702F13C00C1FEDD /* Frameworks */,
 				2220767A1702F13C00C1FEDD /* Products */,
+				7DD4428512844FE2B486B933 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +81,7 @@
 				2220767C1702F13C00C1FEDD /* UIKit.framework */,
 				2220767E1702F13C00C1FEDD /* Foundation.framework */,
 				222076801702F13C00C1FEDD /* CoreGraphics.framework */,
+				FF141EBBC11A4570BA986F04 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -117,6 +123,7 @@
 				222076751702F13C00C1FEDD /* Sources */,
 				222076761702F13C00C1FEDD /* Frameworks */,
 				222076771702F13C00C1FEDD /* Resources */,
+				03960FBFF4D34E1AABCC173B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -168,6 +175,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		03960FBFF4D34E1AABCC173B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		222076751702F13C00C1FEDD /* Sources */ = {
@@ -260,6 +284,7 @@
 		};
 		2220769D1702F13D00C1FEDD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DD4428512844FE2B486B933 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SHAccountStoreExample/SHAccountStoreExample-Prefix.pch";
@@ -271,6 +296,7 @@
 		};
 		2220769E1702F13D00C1FEDD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DD4428512844FE2B486B933 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SHAccountStoreExample/SHAccountStoreExample-Prefix.pch";
@@ -299,6 +325,7 @@
 				2220769E1702F13D00C1FEDD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

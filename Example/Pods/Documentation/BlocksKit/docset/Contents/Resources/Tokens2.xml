@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/A2DynamicDelegate.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/A2DynamicDelegate</TokenIdentifier>
+			<Abstract type="html">A2DynamicDelegate implements a class&apos;s delegate, data source, or other
+delegated protocol by associating protocol methods with a block implementation.</Abstract>
+			<DeclaredIn>A2DynamicDelegate.h</DeclaredIn>
+			
+			<NodeRef refid="2"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/A2DynamicDelegate/initWithProtocol:</TokenIdentifier>
+			<Abstract type="html">The designated initializer for the A2DynamicDelegate proxy.</Abstract>
+			<DeclaredIn>A2DynamicDelegate.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithProtocol:(Protocol *)protocol</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>protocol</Name>
+					<Abstract type="html">A protocol to which the dynamic delegate should conform.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">An initialized delegate proxy.</Abstract></ReturnValue>
+			<Anchor>//api/name/initWithProtocol:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/A2DynamicDelegate/setProtocol:</TokenIdentifier>
+			<Abstract type="html">The protocol delegating the dynamic delegate.</Abstract>
+			<DeclaredIn>A2DynamicDelegate.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) Protocol *protocol</Declaration>
+			
+			
+			<Anchor>//api/name/protocol</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/A2DynamicDelegate/protocol</TokenIdentifier>
+			<Abstract type="html">The protocol delegating the dynamic delegate.</Abstract>
+			<DeclaredIn>A2DynamicDelegate.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, readonly) Protocol *protocol</Declaration>
+			
+			
+			<Anchor>//api/name/protocol</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/A2DynamicDelegate/setHandlers:</TokenIdentifier>
+			<Abstract type="html">A dictionary of custom handlers to be used by custom responders
+in a A2Dynamic(Protocol Name) subclass of A2DynamicDelegate, like
+A2DynamicUIAlertViewDelegate.</Abstract>
+			<DeclaredIn>A2DynamicDelegate.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong, readonly) NSMutableDictionary *handlers</Declaration>
+			
+			
+			<Anchor>//api/name/handlers</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/A2DynamicDelegate/handlers</TokenIdentifier>
+			<Abstract type="html">A dictionary of custom handlers to be used by custom responders
+in a A2Dynamic(Protocol Name) subclass of A2DynamicDelegate, like
+A2DynamicUIAlertViewDelegate.</Abstract>
+			<DeclaredIn>A2DynamicDelegate.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong, readonly) NSMutableDictionary *handlers</Declaration>
+			
+			
+			<Anchor>//api/name/handlers</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/A2DynamicDelegate/setRealDelegate:</TokenIdentifier>
+			<Abstract type="html">When replacing the delegate using the A2BlockDelegate extensions, the object
+responding to classical delegate method implementations.</Abstract>
+			<DeclaredIn>A2DynamicDelegate.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, weak, readonly) id realDelegate</Declaration>
+			
+			
+			<Anchor>//api/name/realDelegate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/A2DynamicDelegate/realDelegate</TokenIdentifier>
+			<Abstract type="html">When replacing the delegate using the A2BlockDelegate extensions, the object
+responding to classical delegate method implementations.</Abstract>
+			<DeclaredIn>A2DynamicDelegate.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, weak, readonly) id realDelegate</Declaration>
+			
+			
+			<Anchor>//api/name/realDelegate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/A2DynamicDelegate/blockImplementationForMethod:</TokenIdentifier>
+			<Abstract type="html">The block that is to be fired when the specified
+selector is called on the reciever.</Abstract>
+			<DeclaredIn>A2DynamicDelegate.h</DeclaredIn>			
+			
+			<Declaration>- (id)blockImplementationForMethod:(SEL)selector</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>selector</Name>
+					<Abstract type="html">An encoded selector. Must not be NULL.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A code block, or nil if no block is assigned.</Abstract></ReturnValue>
+			<Anchor>//api/name/blockImplementationForMethod:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/A2DynamicDelegate/implementMethod:withBlock:</TokenIdentifier>
+			<Abstract type="html">Assigns the given block to be fired when the specified
+selector is called on the reciever.</Abstract>
+			<DeclaredIn>A2DynamicDelegate.h</DeclaredIn>			
+			
+			<Declaration>- (void)implementMethod:(SEL)selector withBlock:(id)block</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>selector</Name>
+					<Abstract type="html">An encoded selector. Must not be NULL.</Abstract>
+				</Parameter><Parameter>
+					<Name>block</Name>
+					<Abstract type="html">A code block with the same signature as selector.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/implementMethod:withBlock:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/A2DynamicDelegate/removeBlockImplementationForMethod:</TokenIdentifier>
+			<Abstract type="html">Disassociates any block so that nothing will be fired
+when the specified selector is called on the reciever.</Abstract>
+			<DeclaredIn>A2DynamicDelegate.h</DeclaredIn>			
+			
+			<Declaration>- (void)removeBlockImplementationForMethod:(SEL)selector</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>selector</Name>
+					<Abstract type="html">An encoded selector. Must not be NULL.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/removeBlockImplementationForMethod:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/A2DynamicDelegate/blockImplementationForClassMethod:</TokenIdentifier>
+			<Abstract type="html">The block that is to be fired when the specified
+selector is called on the delegating object&apos;s class.</Abstract>
+			<DeclaredIn>A2DynamicDelegate.h</DeclaredIn>			
+			
+			<Declaration>- (id)blockImplementationForClassMethod:(SEL)selector</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>selector</Name>
+					<Abstract type="html">An encoded selector. Must not be NULL.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A code block, or nil if no block is assigned.</Abstract></ReturnValue>
+			<Anchor>//api/name/blockImplementationForClassMethod:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/A2DynamicDelegate/implementClassMethod:withBlock:</TokenIdentifier>
+			<Abstract type="html">Assigns the given block to be fired when the specified
+selector is called on the reciever.</Abstract>
+			<DeclaredIn>A2DynamicDelegate.h</DeclaredIn>			
+			
+			<Declaration>- (void)implementClassMethod:(SEL)selector withBlock:(id)block</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>selector</Name>
+					<Abstract type="html">An encoded selector. Must not be NULL.</Abstract>
+				</Parameter><Parameter>
+					<Name>block</Name>
+					<Abstract type="html">A code block with the same signature as selector.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/implementClassMethod:withBlock:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/A2DynamicDelegate/removeBlockImplementationForClassMethod:</TokenIdentifier>
+			<Abstract type="html">Disassociates any blocks so that nothing will be fired
+when the specified selector is called on the delegating
+object&apos;s class.</Abstract>
+			<DeclaredIn>A2DynamicDelegate.h</DeclaredIn>			
+			
+			<Declaration>- (void)removeBlockImplementationForClassMethod:(SEL)selector</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>selector</Name>
+					<Abstract type="html">An encoded selector. Must not be NULL.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/removeBlockImplementationForClassMethod:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

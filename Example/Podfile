@@ -1,0 +1,4 @@
+platform :ios, "5.0"
+#pod 'SHAccountStore', :podspec => '../SHAccountStore.podspec'
+#podspec :path => '../SHAccountStore.podspec'
+pod 'SHAccountStore', :local => '../'
