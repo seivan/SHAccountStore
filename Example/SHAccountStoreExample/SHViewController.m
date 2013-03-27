@@ -7,7 +7,7 @@
 //
 
 #import "SHViewController.h"
-
+#import "SHAccountStore.h"
 
 @interface SHAccount ()
 @property(nonatomic,readwrite) NSString * identifier;
