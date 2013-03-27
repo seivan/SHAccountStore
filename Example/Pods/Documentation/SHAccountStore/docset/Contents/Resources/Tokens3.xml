@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SHAccountStore.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SHAccountStore</TokenIdentifier>
+			<Abstract type="html">/ Options dictionary values for Facebook access</Abstract>
+			<DeclaredIn>SHAccountStore.h</DeclaredIn>
+			
+			<NodeRef refid="3"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SHAccountStore/setAccounts:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHAccountStore.h</DeclaredIn>			
+			
+			<Declaration>@property (NS_NONATOMIC_IOSONLY, weak, readonly) NSArray *accounts</Declaration>
+			
+			
+			<Anchor>//api/name/accounts</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SHAccountStore/accounts</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHAccountStore.h</DeclaredIn>			
+			
+			<Declaration>@property (NS_NONATOMIC_IOSONLY, weak, readonly) NSArray *accounts</Declaration>
+			
+			
+			<Anchor>//api/name/accounts</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SHAccountStore/accountWithIdentifier:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHAccountStore.h</DeclaredIn>			
+			
+			<Declaration>- (SHAccount *)accountWithIdentifier:(NSString *)identifier</Declaration>
+			
+			
+			<Anchor>//api/name/accountWithIdentifier:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SHAccountStore/accountTypeWithAccountTypeIdentifier:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHAccountStore.h</DeclaredIn>			
+			
+			<Declaration>- (SHAccountType *)accountTypeWithAccountTypeIdentifier:(NSString *)typeIdentifier</Declaration>
+			
+			
+			<Anchor>//api/name/accountTypeWithAccountTypeIdentifier:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SHAccountStore/accountsWithAccountType:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHAccountStore.h</DeclaredIn>			
+			
+			<Declaration>- (NSArray *)accountsWithAccountType:(SHAccountType *)accountType</Declaration>
+			
+			
+			<Anchor>//api/name/accountsWithAccountType:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SHAccountStore/saveAccount:withCompletionHandler:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHAccountStore.h</DeclaredIn>			
+			
+			<Declaration>- (void)saveAccount:(SHAccount *)account withCompletionHandler:(SHAccountStoreSaveCompletionHandler)completionHandler</Declaration>
+			
+			
+			<Anchor>//api/name/saveAccount:withCompletionHandler:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SHAccountStore/requestAccessToAccountsWithType:withCompletionHandler:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHAccountStore.h</DeclaredIn>			
+			
+			<Declaration>- (void)requestAccessToAccountsWithType:(SHAccountType *)accountType withCompletionHandler:(SHAccountStoreRequestAccessCompletionHandler)handler</Declaration>
+			
+			
+			<Anchor>//api/name/requestAccessToAccountsWithType:withCompletionHandler:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SHAccountStore/requestAccessToAccountsWithType:options:completion:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHAccountStore.h</DeclaredIn>			
+			
+			<Declaration>- (void)requestAccessToAccountsWithType:(SHAccountType *)accountType options:(NSDictionary *)options completion:(SHAccountStoreRequestAccessCompletionHandler)completionHandler</Declaration>
+			
+			
+			<Anchor>//api/name/requestAccessToAccountsWithType:options:completion:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SHAccountStore/renewCredentialsForAccount:completion:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHAccountStore.h</DeclaredIn>			
+			
+			<Declaration>- (void)renewCredentialsForAccount:(SHAccount *)account completion:(SHAccountStoreCredentialRenewalHandler)completionHandler</Declaration>
+			
+			
+			<Anchor>//api/name/renewCredentialsForAccount:completion:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SHAccountStore/removeAccount:withCompletionHandler:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHAccountStore.h</DeclaredIn>			
+			
+			<Declaration>- (void)removeAccount:(SHAccount *)account withCompletionHandler:(SHAccountStoreRemoveCompletionHandler)completionHandler</Declaration>
+			
+			
+			<Anchor>//api/name/removeAccount:withCompletionHandler:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

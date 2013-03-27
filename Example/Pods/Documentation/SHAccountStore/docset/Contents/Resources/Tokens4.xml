@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SHAccountType.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SHAccountType</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHAccountType.h</DeclaredIn>
+			
+			<NodeRef refid="4"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SHAccountType/setAccountTypeDescription:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHAccountType.h</DeclaredIn>			
+			
+			<Declaration>@property (NS_NONATOMIC_IOSONLY, readonly) NSString *accountTypeDescription</Declaration>
+			
+			
+			<Anchor>//api/name/accountTypeDescription</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SHAccountType/accountTypeDescription</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHAccountType.h</DeclaredIn>			
+			
+			<Declaration>@property (NS_NONATOMIC_IOSONLY, readonly) NSString *accountTypeDescription</Declaration>
+			
+			
+			<Anchor>//api/name/accountTypeDescription</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SHAccountType/setIdentifier:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHAccountType.h</DeclaredIn>			
+			
+			<Declaration>@property (NS_NONATOMIC_IOSONLY, readonly) NSString *identifier</Declaration>
+			
+			
+			<Anchor>//api/name/identifier</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SHAccountType/identifier</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHAccountType.h</DeclaredIn>			
+			
+			<Declaration>@property (NS_NONATOMIC_IOSONLY, readonly) NSString *identifier</Declaration>
+			
+			
+			<Anchor>//api/name/identifier</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SHAccountType/setAccessGranted:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHAccountType.h</DeclaredIn>			
+			
+			<Declaration>@property (NS_NONATOMIC_IOSONLY, readonly) BOOL accessGranted</Declaration>
+			
+			
+			<Anchor>//api/name/accessGranted</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SHAccountType/accessGranted</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHAccountType.h</DeclaredIn>			
+			
+			<Declaration>@property (NS_NONATOMIC_IOSONLY, readonly) BOOL accessGranted</Declaration>
+			
+			
+			<Anchor>//api/name/accessGranted</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

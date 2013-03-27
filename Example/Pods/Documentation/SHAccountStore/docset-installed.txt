@@ -1,0 +1,4 @@
+Documentation set was installed to Xcode!
+
+Path: /Users/seivan/Library/Developer/Shared/Documentation/DocSets/org.cocoapods.SHAccountStore-0.0.1.docset
+Time: 2013-03-27 10:41:46 +0000

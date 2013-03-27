@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SHAccountCredential.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SHAccountCredential</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHAccountCredential.h</DeclaredIn>
+			
+			<NodeRef refid="2"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SHAccountCredential/initWithOAuthToken:tokenSecret:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHAccountCredential.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithOAuthToken:(NSString *)token tokenSecret:(NSString *)secret</Declaration>
+			
+			
+			<Anchor>//api/name/initWithOAuthToken:tokenSecret:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SHAccountCredential/initWithOAuth2Token:refreshToken:expiryDate:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHAccountCredential.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithOAuth2Token:(NSString *)token refreshToken:(NSString *)refreshToken expiryDate:(NSDate *)expiryDate</Declaration>
+			
+			
+			<Anchor>//api/name/initWithOAuth2Token:refreshToken:expiryDate:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SHAccountCredential/setOauthToken:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHAccountCredential.h</DeclaredIn>			
+			
+			<Declaration>@property (copy, NS_NONATOMIC_IOSONLY) NSString *oauthToken</Declaration>
+			
+			
+			<Anchor>//api/name/oauthToken</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/SHAccountCredential/oauthToken</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>SHAccountCredential.h</DeclaredIn>			
+			
+			<Declaration>@property (copy, NS_NONATOMIC_IOSONLY) NSString *oauthToken</Declaration>
+			
+			
+			<Anchor>//api/name/oauthToken</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

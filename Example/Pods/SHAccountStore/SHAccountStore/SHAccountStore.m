@@ -123,7 +123,7 @@ NSString * const kAccountStoreDicitonaryKey   = @"kAccountStoreDicitonaryKey";
   @try {
     NSAssert(account, @"Must pass account");
     NSAssert(account.accountType, @"account must have accountType");
-    
+
     LUKeychainAccess * keychain = [LUKeychainAccess standardKeychainAccess];
     NSDictionary * accountStoreDictionary = [keychain objectForKey:kAccountStoreDicitonaryKey];
     if(accountStoreDictionary == nil) accountStoreDictionary = @{};
@@ -139,14 +139,14 @@ NSString * const kAccountStoreDicitonaryKey   = @"kAccountStoreDicitonaryKey";
     NSMutableDictionary * accountStoreChangeDictionary = accountStoreDictionary.mutableCopy;
     
     //Add new account
-    [accountsChangesSet addObject:account.copy];
-    
+   [accountsChangesSet addObject:account.copy];
+
     //Sync back new sets of accounts back to the dictionary
     accountStoreChangeDictionary[account.accountType.identifier] = accountsChangesSet;
     
     [keychain setObject:accountStoreChangeDictionary forKey:kAccountStoreDicitonaryKey];
     isSuccess = YES;
-    
+
     //Notify that changes have been made, and user should purge all accounts and accountTypes
     [NSNotificationCenter.defaultCenter postNotificationName:SHAccountStoreDidChangeNotification object:nil];
     
@@ -162,7 +162,7 @@ NSString * const kAccountStoreDicitonaryKey   = @"kAccountStoreDicitonaryKey";
 
 
 -(void)requestAccessToAccountsWithType:(SHAccountType *)accountType
-                 withCompletionHandler:(SHAccountStoreRequestAccessCompletionHandler)handler {
+withCompletionHandler:(SHAccountStoreRequestAccessCompletionHandler)handler {
   [self requestAccessToAccountsWithType:accountType options:nil completion:handler];
 }
 
@@ -176,7 +176,7 @@ NSString * const kAccountStoreDicitonaryKey   = @"kAccountStoreDicitonaryKey";
   @try {
     @try {
       NSAssert(accountType, @"Must pass accountType");
-      //      NSAssert(accountType.accountTypeDescription, @"accountType must have accountTypeDescription");
+//      NSAssert(accountType.accountTypeDescription, @"accountType must have accountTypeDescription");
     }
     @catch (NSException *exception) {[exception raise];}
     @finally {
@@ -193,16 +193,16 @@ NSString * const kAccountStoreDicitonaryKey   = @"kAccountStoreDicitonaryKey";
       isSuccess = YES;
       LUKeychainAccess * keychain = [LUKeychainAccess standardKeychainAccess];
       NSDictionary * accountTypeDictionary = [keychain objectForKey:kAccountTypeDicitonaryKey];
-      
+
       if(accountTypeDictionary == nil) accountTypeDictionary = @{};
       NSMutableDictionary * accountTypeChangesDictionary = accountTypeDictionary.mutableCopy;
-      
+
       
       accountType.accessGranted = isSuccess;
       accountTypeChangesDictionary[accountType.identifier] = accountType;
-      
+
       [keychain setObject:accountTypeChangesDictionary.copy forKey:kAccountTypeDicitonaryKey];
-      
+
       [NSNotificationCenter.defaultCenter postNotificationName:SHAccountStoreDidChangeNotification object:nil];
       dispatch_semaphore_signal(semaphore);
     }];
@@ -233,7 +233,7 @@ NSString * const kAccountStoreDicitonaryKey   = @"kAccountStoreDicitonaryKey";
   @finally {
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
-      
+
       dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
       dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
       
