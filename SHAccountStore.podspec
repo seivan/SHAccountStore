@@ -17,12 +17,12 @@ Pod::Spec.new do |s|
   s.license      = {:type => 'MIT' } #,:file => 'LICENSE.md'
   s.author       = { "Seivan Heidari" => "seivan.heidari@icloud.com" }
   
-  s.source       = { :git => "https://github.com/seivan/SHAccountStore.git"}
+  s.source       = { :git => "https://github.com/seivan/SHAccountStore.git" }
   
 
   s.platform  = :ios, "5.0"
 
-  s.source_files = 'SHAccountStore'
+  s.source_files = 'SHAccountStore/**/*.{h,m}'
   s.requires_arc = true
   s.dependency 'LUKeychainAccess'
   s.dependency 'BlocksKit'

@@ -1,6 +1,17 @@
 
-PODS: []
+PODS:
+- BlocksKit (1.8.1):
+  - libffi
+- LUKeychainAccess (1.0.1)
+- libffi (3.0.11)
 
-DEPENDENCIES: []
+DEPENDENCIES:
+- BlocksKit
+- LUKeychainAccess
+
+SPEC CHECKSUMS:
+  BlocksKit: 18102744fd7c44b54f1e54ce6ffe9258bcb5df81
+  LUKeychainAccess: 6ba22b2e1eec24f9f2fc9c6a9087d5524a58b1a2
+  libffi: 8a1d9ba43c0c84b546b42c6f742714e73aa07ae1
 
 COCOAPODS: 0.16.4
