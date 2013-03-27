@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/LUKeychainAccess.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/LUKeychainAccess</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LUKeychainAccess.h</DeclaredIn>
+			
+			<NodeRef refid="1"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/LUKeychainAccess/standardKeychainAccess</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LUKeychainAccess.h</DeclaredIn>			
+			
+			<Declaration>+ (LUKeychainAccess *)standardKeychainAccess</Declaration>
+			
+			
+			<Anchor>//api/name/standardKeychainAccess</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LUKeychainAccess/boolForKey:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LUKeychainAccess.h</DeclaredIn>			
+			
+			<Declaration>- (BOOL)boolForKey:(NSString *)key</Declaration>
+			
+			
+			<Anchor>//api/name/boolForKey:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LUKeychainAccess/dataForKey:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LUKeychainAccess.h</DeclaredIn>			
+			
+			<Declaration>- (NSData *)dataForKey:(NSString *)key</Declaration>
+			
+			
+			<Anchor>//api/name/dataForKey:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LUKeychainAccess/doubleForKey:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LUKeychainAccess.h</DeclaredIn>			
+			
+			<Declaration>- (double)doubleForKey:(NSString *)key</Declaration>
+			
+			
+			<Anchor>//api/name/doubleForKey:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LUKeychainAccess/floatForKey:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LUKeychainAccess.h</DeclaredIn>			
+			
+			<Declaration>- (float)floatForKey:(NSString *)key</Declaration>
+			
+			
+			<Anchor>//api/name/floatForKey:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LUKeychainAccess/integerForKey:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LUKeychainAccess.h</DeclaredIn>			
+			
+			<Declaration>- (NSInteger)integerForKey:(NSString *)key</Declaration>
+			
+			
+			<Anchor>//api/name/integerForKey:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LUKeychainAccess/objectForKey:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LUKeychainAccess.h</DeclaredIn>			
+			
+			<Declaration>- (id)objectForKey:(NSString *)key</Declaration>
+			
+			
+			<Anchor>//api/name/objectForKey:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LUKeychainAccess/stringForKey:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LUKeychainAccess.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)stringForKey:(NSString *)key</Declaration>
+			
+			
+			<Anchor>//api/name/stringForKey:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LUKeychainAccess/registerDefaults:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LUKeychainAccess.h</DeclaredIn>			
+			
+			<Declaration>- (void)registerDefaults:(NSDictionary *)dictionary</Declaration>
+			
+			
+			<Anchor>//api/name/registerDefaults:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LUKeychainAccess/setBool:forKey:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LUKeychainAccess.h</DeclaredIn>			
+			
+			<Declaration>- (void)setBool:(BOOL)value forKey:(NSString *)key</Declaration>
+			
+			
+			<Anchor>//api/name/setBool:forKey:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LUKeychainAccess/setData:forKey:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LUKeychainAccess.h</DeclaredIn>			
+			
+			<Declaration>- (void)setData:(NSData *)data forKey:(NSString *)key</Declaration>
+			
+			
+			<Anchor>//api/name/setData:forKey:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LUKeychainAccess/setDouble:forKey:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LUKeychainAccess.h</DeclaredIn>			
+			
+			<Declaration>- (void)setDouble:(double)value forKey:(NSString *)key</Declaration>
+			
+			
+			<Anchor>//api/name/setDouble:forKey:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LUKeychainAccess/setFloat:forKey:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LUKeychainAccess.h</DeclaredIn>			
+			
+			<Declaration>- (void)setFloat:(float)value forKey:(NSString *)key</Declaration>
+			
+			
+			<Anchor>//api/name/setFloat:forKey:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LUKeychainAccess/setInteger:forKey:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LUKeychainAccess.h</DeclaredIn>			
+			
+			<Declaration>- (void)setInteger:(NSInteger)value forKey:(NSString *)key</Declaration>
+			
+			
+			<Anchor>//api/name/setInteger:forKey:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LUKeychainAccess/setObject:forKey:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LUKeychainAccess.h</DeclaredIn>			
+			
+			<Declaration>- (void)setObject:(id)value forKey:(NSString *)key</Declaration>
+			
+			
+			<Anchor>//api/name/setObject:forKey:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LUKeychainAccess/setString:forKey:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LUKeychainAccess.h</DeclaredIn>			
+			
+			<Declaration>- (void)setString:(NSString *)inputString forKey:(NSString *)key</Declaration>
+			
+			
+			<Anchor>//api/name/setString:forKey:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

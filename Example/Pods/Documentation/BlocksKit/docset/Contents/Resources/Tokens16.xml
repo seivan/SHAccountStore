@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Categories/NSObject+A2DynamicDelegate.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cat/NSObject(A2DynamicDelegate)</TokenIdentifier>
+			<Abstract type="html">The A2DynamicDelegate category to NSObject provides the primary interface
+by which dynamic delegates are generated for a given object.</Abstract>
+			<DeclaredIn>NSObject+A2DynamicDelegate.h</DeclaredIn>
+			
+			<NodeRef refid="16"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSObject(A2DynamicDelegate)/dynamicDataSource</TokenIdentifier>
+			<Abstract type="html">Creates or gets a dynamic data source for the reciever.</Abstract>
+			<DeclaredIn>NSObject+A2DynamicDelegate.h</DeclaredIn>			
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/cl/A2DynamicDelegate</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (id)dynamicDataSource</Declaration>
+			
+			<ReturnValue><Abstract type="html">A dynamic data source.</Abstract></ReturnValue>
+			<Anchor>//api/name/dynamicDataSource</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSObject(A2DynamicDelegate)/dynamicDelegate</TokenIdentifier>
+			<Abstract type="html">Creates or gets a dynamic delegate for the reciever.</Abstract>
+			<DeclaredIn>NSObject+A2DynamicDelegate.h</DeclaredIn>			
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/cl/A2DynamicDelegate</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (id)dynamicDelegate</Declaration>
+			
+			<ReturnValue><Abstract type="html">A dynamic delegate.</Abstract></ReturnValue>
+			<Anchor>//api/name/dynamicDelegate</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSObject(A2DynamicDelegate)/dynamicDelegateForProtocol:</TokenIdentifier>
+			<Abstract type="html">Creates or gets a dynamic protocol implementation for
+the reciever. The designated initializer.</Abstract>
+			<DeclaredIn>NSObject+A2DynamicDelegate.h</DeclaredIn>			
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/cl/A2DynamicDelegate</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (id)dynamicDelegateForProtocol:(Protocol *)protocol</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>protocol</Name>
+					<Abstract type="html">A custom protocol.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A dynamic protocol implementation.</Abstract></ReturnValue>
+			<Anchor>//api/name/dynamicDelegateForProtocol:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>

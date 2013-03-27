@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/A2BlockInvocation.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/A2BlockInvocation</TokenIdentifier>
+			<Abstract type="html">An A2BlockInvocation is an Objective-C block call rendered static, that
+is, it is an action turned into an object. A2BlockInvocation objects are used
+to store and forward closure invocations between objects, primarily by the
+A2DynamicDelegate system.</Abstract>
+			<DeclaredIn>A2BlockInvocation.h</DeclaredIn>
+			
+			<NodeRef refid="1"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/A2BlockInvocation/initWithBlock:methodSignature:</TokenIdentifier>
+			<Abstract type="html">Returns an A2BlockInvocation object able to construct calls using a given
+block and a given method signature.</Abstract>
+			<DeclaredIn>A2BlockInvocation.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithBlock:(id)block methodSignature:(NSMethodSignature *)methodSignature</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>block</Name>
+					<Abstract type="html">An Objective-C block literal.</Abstract>
+				</Parameter><Parameter>
+					<Name>methodSignature</Name>
+					<Abstract type="html">An Objective-C method signature matching the block.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">An initialized block invocation object.</Abstract></ReturnValue>
+			<Anchor>//api/name/initWithBlock:methodSignature:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/A2BlockInvocation/setMethodSignature:</TokenIdentifier>
+			<Abstract type="html">Returns the reciever&apos;s method signature. Appropriate for use in
+methodSignatureForSelector:, and reflects the method with a selector.</Abstract>
+			<DeclaredIn>A2BlockInvocation.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong, readonly) NSMethodSignature *methodSignature</Declaration>
+			
+			
+			<Anchor>//api/name/methodSignature</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/A2BlockInvocation/methodSignature</TokenIdentifier>
+			<Abstract type="html">Returns the reciever&apos;s method signature. Appropriate for use in
+methodSignatureForSelector:, and reflects the method with a selector.</Abstract>
+			<DeclaredIn>A2BlockInvocation.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong, readonly) NSMethodSignature *methodSignature</Declaration>
+			
+			
+			<Anchor>//api/name/methodSignature</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/A2BlockInvocation/setBlockSignature:</TokenIdentifier>
+			<Abstract type="html">Returns the reciever&apos;s block signature. Intended for use in compatibility
+comparison, and generally not useful.</Abstract>
+			<DeclaredIn>A2BlockInvocation.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong, readonly) NSMethodSignature *blockSignature</Declaration>
+			
+			
+			<Anchor>//api/name/blockSignature</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/A2BlockInvocation/blockSignature</TokenIdentifier>
+			<Abstract type="html">Returns the reciever&apos;s block signature. Intended for use in compatibility
+comparison, and generally not useful.</Abstract>
+			<DeclaredIn>A2BlockInvocation.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, strong, readonly) NSMethodSignature *blockSignature</Declaration>
+			
+			
+			<Anchor>//api/name/blockSignature</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/A2BlockInvocation/setBlock:</TokenIdentifier>
+			<Abstract type="html">Returns the reciever&apos;s block. Can be used to call it manually, if you
+know its signature.</Abstract>
+			<DeclaredIn>A2BlockInvocation.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy, readonly) id block</Declaration>
+			
+			
+			<Anchor>//api/name/block</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/A2BlockInvocation/block</TokenIdentifier>
+			<Abstract type="html">Returns the reciever&apos;s block. Can be used to call it manually, if you
+know its signature.</Abstract>
+			<DeclaredIn>A2BlockInvocation.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic, copy, readonly) id block</Declaration>
+			
+			
+			<Anchor>//api/name/block</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/A2BlockInvocation/retainArguments</TokenIdentifier>
+			<Abstract type="html">If the receiver hasn’t already done so, retains all object arguments of the
+receiver and copies all of its C-string arguments.</Abstract>
+			<DeclaredIn>A2BlockInvocation.h</DeclaredIn>			
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/instm/A2BlockInvocation/argumentsRetained</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (void)retainArguments</Declaration>
+			
+			
+			<Anchor>//api/name/retainArguments</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/A2BlockInvocation/argumentsRetained</TokenIdentifier>
+			<Abstract type="html">Returns YES if the receiver has retained its arguments, NO otherwise.</Abstract>
+			<DeclaredIn>A2BlockInvocation.h</DeclaredIn>			
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/instm/A2BlockInvocation/retainArguments</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (BOOL)argumentsRetained</Declaration>
+			
+			
+			<Anchor>//api/name/argumentsRetained</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/A2BlockInvocation/getReturnValue:</TokenIdentifier>
+			<Abstract type="html">Gets the receiver&apos;s return value.</Abstract>
+			<DeclaredIn>A2BlockInvocation.h</DeclaredIn>			
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/instm/A2BlockInvocation/setReturnValue:</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (void)getReturnValue:(void *)retLoc</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>retLoc</Name>
+					<Abstract type="html">An untyped buffer into which the receiver copies its return
+value. It should be large enough to accommodate the value. See the discussion
+for more information.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/getReturnValue:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/A2BlockInvocation/setReturnValue:</TokenIdentifier>
+			<Abstract type="html">Sets the receiver’s return value.</Abstract>
+			<DeclaredIn>A2BlockInvocation.h</DeclaredIn>			
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/instm/A2BlockInvocation/invoke</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/instm/A2BlockInvocation/getReturnValue:</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (void)setReturnValue:(void *)retLoc</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>retLoc</Name>
+					<Abstract type="html">An untyped buffer whose contents are copied as the receiver&apos;s
+return value.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setReturnValue:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/A2BlockInvocation/getArgument:atIndex:</TokenIdentifier>
+			<Abstract type="html">Returns by indirection the receiver&apos;s argument at a specified index.</Abstract>
+			<DeclaredIn>A2BlockInvocation.h</DeclaredIn>			
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/instm/A2BlockInvocation/setArgument:atIndex:</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (void)getArgument:(void *)argumentLocation atIndex:(NSInteger)idx</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>argumentLocation</Name>
+					<Abstract type="html">An untyped buffer to hold the returned argument. See
+the discussion relating to argument values that are objects.</Abstract>
+				</Parameter><Parameter>
+					<Name>idx</Name>
+					<Abstract type="html">An integer specifying the index of the argument to get, starting
+at 0 representing the first argument of the underlying block.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/getArgument:atIndex:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/A2BlockInvocation/setArgument:atIndex:</TokenIdentifier>
+			<Abstract type="html">Sets an argument of the receiver.</Abstract>
+			<DeclaredIn>A2BlockInvocation.h</DeclaredIn>			
+			
+			<Declaration>- (void)setArgument:(void *)argumentLocation atIndex:(NSInteger)idx</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>argumentLocation</Name>
+					<Abstract type="html">An untyped buffer containing an argument to be assigned
+to the receiver. See the discussion relating to arguments that are objects.</Abstract>
+				</Parameter><Parameter>
+					<Name>idx</Name>
+					<Abstract type="html">An integer specifying the index of the argument, starting at 0
+representing the first argument of the underlying block.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setArgument:atIndex:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/A2BlockInvocation/clearArguments</TokenIdentifier>
+			<Abstract type="html">Unsets all arguments in the block invocation, including releasing any
+objects if argumentsRetained is YES.</Abstract>
+			<DeclaredIn>A2BlockInvocation.h</DeclaredIn>			
+			
+			<Declaration>- (void)clearArguments</Declaration>
+			
+			
+			<Anchor>//api/name/clearArguments</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/A2BlockInvocation/invoke</TokenIdentifier>
+			<Abstract type="html">Calls the receiver&apos;s block (with arguments) and sets the return value.</Abstract>
+			<DeclaredIn>A2BlockInvocation.h</DeclaredIn>			
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/instm/A2BlockInvocation/setArgument:atIndex:</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/instm/A2BlockInvocation/getReturnValue:</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (void)invoke</Declaration>
+			
+			
+			<Anchor>//api/name/invoke</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/A2BlockInvocation/invokeUsingInvocation:</TokenIdentifier>
+			<Abstract type="html">Calls the receiver&apos;s block with the arguments from the given invocation,
+and sets the return value both on the receiving invocation and the given
+invocation.</Abstract>
+			<DeclaredIn>A2BlockInvocation.h</DeclaredIn>			
+			
+	<RelatedTokens>
+		<TokenIdentifier>//apple_ref/occ/instm/A2BlockInvocation/setArgument:atIndex:</TokenIdentifier>
+		<TokenIdentifier>//apple_ref/occ/instm/A2BlockInvocation/getReturnValue:</TokenIdentifier>
+		
+	</RelatedTokens>
+	
+			<Declaration>- (void)invokeUsingInvocation:(NSInvocation *)inv</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>inv</Name>
+					<Abstract type="html">An instance of NSInvocation with values for its arguments set.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/invokeUsingInvocation:</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>
