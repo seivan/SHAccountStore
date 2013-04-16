@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Seivan Heidari. All rights reserved.
 //
 
-//#import <Accounts/Accounts.h>
+#import <Accounts/Accounts.h>
 
 #import "SHAccount.h"
 
