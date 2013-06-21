@@ -30,11 +30,23 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>lol</key>
+	<string>FUUUUUUUUUUUCK</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>SHAccountStore</key>
+	<dict>
+		<key>LinkedInAccounts</key>
+		<dict>
+			<key>message</key>
+			<string>Maven wants to connect to your LinkedIn account</string>
+			<key>title</key>
+			<string>Permission for LinkedIn</string>
+		</dict>
+	</dict>
 </dict>
 </plist>

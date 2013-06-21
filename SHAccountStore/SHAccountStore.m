@@ -73,9 +73,9 @@ NSString * const kAccountStoreDicitonaryKey   = @"kAccountStoreDicitonaryKey";
       }
     }];
   }];
-  
+
   return chosenAccount;
-  
+
 }
 
 -(SHAccountType *)accountTypeWithAccountTypeIdentifier:(NSString *)typeIdentifier; {
@@ -85,11 +85,11 @@ NSString * const kAccountStoreDicitonaryKey   = @"kAccountStoreDicitonaryKey";
   NSDictionary * accountTypeDictionary = [keychain objectForKey:kAccountTypeDicitonaryKey];
   if(accountTypeDictionary == nil) accountTypeDictionary = @{};
   accountTypeWithAccountTypeIdentifier = accountTypeDictionary[typeIdentifier];
-  
+
   if(accountTypeWithAccountTypeIdentifier == nil) {
     accountTypeWithAccountTypeIdentifier = [[SHAccountType alloc] initWithIdentifier:typeIdentifier];
   }
-  
+
   return accountTypeWithAccountTypeIdentifier;
 }
 
@@ -123,21 +123,21 @@ NSString * const kAccountStoreDicitonaryKey   = @"kAccountStoreDicitonaryKey";
   @try {
     NSAssert(account, @"Must pass account");
     NSAssert(account.accountType, @"account must have accountType");
-    
+
     LUKeychainAccess * keychain = [LUKeychainAccess standardKeychainAccess];
     NSDictionary * accountStoreDictionary = [keychain objectForKey:kAccountStoreDicitonaryKey];
     if(accountStoreDictionary == nil) accountStoreDictionary = @{};
-    
+
     //Get two copies of accounts, mutable and immutable
     NSSet * accountsSet = accountStoreDictionary[account.accountType.identifier];
     if(accountsSet == nil) accountsSet = [NSSet set];
     NSMutableSet * accountsChangesSet = accountsSet.mutableCopy;
-    
+
     //Remove existing account
     __block SHAccount * existingAccount = [self accountWithIdentifier:account.identifier];
     if(existingAccount){
       [accountsChangesSet enumerateObjectsUsingBlock:^(SHAccount * existingAccountToDelete, BOOL *stop) {
-        if([existingAccount.identifier isEqualToString:existingAccount.identifier]) {
+        if([existingAccount.identifier isEqualToString:existingAccountToDelete.identifier]) {
           existingAccount = existingAccountToDelete;
           stop = YES;
         }
@@ -145,19 +145,19 @@ NSString * const kAccountStoreDicitonaryKey   = @"kAccountStoreDicitonaryKey";
       [accountsChangesSet removeObject:existingAccount];
     }
     NSMutableDictionary * accountStoreChangeDictionary = accountStoreDictionary.mutableCopy;
-    
+
     //Add new account
     [accountsChangesSet addObject:account.copy];
-    
+
     //Sync back new sets of accounts back to the dictionary
     accountStoreChangeDictionary[account.accountType.identifier] = accountsChangesSet;
-    
+
     [keychain setObject:accountStoreChangeDictionary forKey:kAccountStoreDicitonaryKey];
     isSuccess = YES;
-    
+
     //Notify that changes have been made, and user should purge all accounts and accountTypes
     [NSNotificationCenter.defaultCenter postNotificationName:SHAccountStoreDidChangeNotification object:nil];
-    
+
   }
   @catch (NSException *exception) {
     error = [NSError errorWithDomain:exception.name code:0 userInfo:exception.userInfo];
@@ -165,7 +165,7 @@ NSString * const kAccountStoreDicitonaryKey   = @"kAccountStoreDicitonaryKey";
   @finally {
     completionHandler(isSuccess, error);
   }
-  
+
 }
 
 
@@ -176,55 +176,62 @@ NSString * const kAccountStoreDicitonaryKey   = @"kAccountStoreDicitonaryKey";
 -(void)requestAccessToAccountsWithType:(SHAccountType *)accountType
                                options:(NSDictionary *)options
                             completion:(SHAccountStoreRequestAccessCompletionHandler)completionHandler; {
-  
-  
+
+
   __block NSError * error = nil;
   __block BOOL isSuccess = NO;
   NSAssert(accountType, @"Must pass accountType");
   NSString * appName  = [[NSBundle mainBundle] infoDictionary][@"CFBundleDisplayName"];
   NSString * alertMessage = [NSString stringWithFormat:@"%@ requests access to %@ accounts.", appName, accountType.identifier];
-  NSString * alertTitle = [NSString stringWithFormat:@"Permission for %@", accountType.identifier];
+
+  NSString     * alertTitle = [NSString stringWithFormat:@"Permission for %@", accountType.identifier];
+  
+  NSDictionary * customMessage  = [[NSBundle mainBundle] infoDictionary][@"SHAccountStore"][accountType.identifier];
+  if(customMessage){
+    if(customMessage[@"title"])   alertTitle = customMessage[@"title"];
+    if(customMessage[@"message"]) alertMessage = customMessage[@"message"];
+  }
   
   UIAlertView * alert = [UIAlertView alertViewWithTitle:alertTitle message:alertMessage];
   LUKeychainAccess * keychain = [LUKeychainAccess standardKeychainAccess];
   NSDictionary * accountTypeDictionary = [keychain objectForKey:kAccountTypeDicitonaryKey];
-  
+
   if(accountTypeDictionary == nil) accountTypeDictionary = @{};
   NSMutableDictionary * accountTypeChangesDictionary = accountTypeDictionary.mutableCopy;
-  
+
 
   [alert addButtonWithTitle:@"Allow" handler:^{
     isSuccess = YES;
-    
+
     accountType.accessGranted = isSuccess;
     accountTypeChangesDictionary[accountType.identifier] = accountType;
-    
+
     [keychain setObject:accountTypeChangesDictionary.copy forKey:kAccountTypeDicitonaryKey];
-    
+
     [NSNotificationCenter.defaultCenter postNotificationName:SHAccountStoreDidChangeNotification object:nil];
     completionHandler(isSuccess, error);
   }];
-  
+
   [alert addButtonWithTitle:@"Deny" handler:^{
     isSuccess = NO;
     completionHandler(isSuccess, error);
   }];
-  
+
   [alert show];
-  
-  
-  
-  
+
+
+
+
 }
 
 
 
 -(void)renewCredentialsForAccount:(SHAccount *)account completion:(SHAccountStoreCredentialRenewalHandler)completionHandler; {
-  
+
 }
 
 -(void)removeAccount:(SHAccount *)account withCompletionHandler:(SHAccountStoreRemoveCompletionHandler)completionHandler; {
-  
+
 }
 
 @end
