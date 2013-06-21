@@ -183,8 +183,15 @@ NSString * const kAccountStoreDicitonaryKey   = @"kAccountStoreDicitonaryKey";
   NSAssert(accountType, @"Must pass accountType");
   NSString * appName  = [[NSBundle mainBundle] infoDictionary][@"CFBundleDisplayName"];
   NSString * alertMessage = [NSString stringWithFormat:@"%@ requests access to %@ accounts.", appName, accountType.identifier];
-  NSString * alertTitle = [NSString stringWithFormat:@"Permission for %@", accountType.identifier];
 
+  NSString     * alertTitle = [NSString stringWithFormat:@"Permission for %@", accountType.identifier];
+  
+  NSDictionary * customMessage  = [[NSBundle mainBundle] infoDictionary][@"SHAccountStore"][accountType.identifier];
+  if(customMessage){
+    if(customMessage[@"title"])   alertTitle = customMessage[@"title"];
+    if(customMessage[@"message"]) alertMessage = customMessage[@"message"];
+  }
+  
   UIAlertView * alert = [UIAlertView alertViewWithTitle:alertTitle message:alertMessage];
   LUKeychainAccess * keychain = [LUKeychainAccess standardKeychainAccess];
   NSDictionary * accountTypeDictionary = [keychain objectForKey:kAccountTypeDicitonaryKey];
