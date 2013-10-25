@@ -1,0 +1,5 @@
+#include "Pods-SHAccountStore.xcconfig"
+GCC_PREPROCESSOR_DEFINITIONS = COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/BuildHeaders" "${PODS_ROOT}/BuildHeaders/SHAccountStore" "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/LUKeychainAccess" "${PODS_ROOT}/Headers/SHAccountStore" "${PODS_ROOT}/Headers/SHActionSheetBlocks" "${PODS_ROOT}/Headers/SHAlertViewBlocks" "${PODS_ROOT}/Headers/SHFastEnumerationProtocols"
+OTHER_LDFLAGS = -ObjC
+PODS_ROOT = ${SRCROOT}

@@ -1,7 +1,28 @@
+#import "LUKeychainErrorHandler.h"
+
+extern NSString *LUKeychainAccessErrorDomain;
+
+typedef NS_ENUM(NSInteger, LUKeychainAccessError) {
+  LUKeychainAccessInvalidArchiveError
+};
+
+typedef NS_ENUM(NSInteger, LUKeychainAccessAccessibility) {
+  LUKeychainAccessAttrAccessibleAfterFirstUnlock,
+  LUKeychainAccessAttrAccessibleAfterFirstUnlockThisDeviceOnly,
+  LUKeychainAccessAttrAccessibleAlways,
+  LUKeychainAccessAttrAccessibleAlwaysThisDeviceOnly,
+  LUKeychainAccessAttrAccessibleWhenUnlocked,
+  LUKeychainAccessAttrAccessibleWhenUnlockedThisDeviceOnly
+};
+
 @interface LUKeychainAccess : NSObject
+
+@property (nonatomic, assign) LUKeychainAccessAccessibility accessibilityState;
+@property (nonatomic, strong) id<LUKeychainErrorHandler> errorHandler;
 
 // Public Methods
 + (LUKeychainAccess *)standardKeychainAccess;
+- (BOOL)deleteAll;
 
 // Getters
 - (BOOL)boolForKey:(NSString *)key;
