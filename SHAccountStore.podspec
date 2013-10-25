@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => git_url, :tag => version }
   
 
-  s.platform  = :ios, "5.0"
+  s.platform  = :ios, "6.0"
 
   s.source_files = 'SHAccountStore/**/*.{h,m}'
   s.requires_arc = true
