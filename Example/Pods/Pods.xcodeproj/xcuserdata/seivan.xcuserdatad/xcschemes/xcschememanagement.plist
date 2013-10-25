@@ -4,50 +4,65 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-LUKeychainAccess.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-SHAccountStore.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-SHActionSheetBlocks.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-SHAlertViewBlocks.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-SHFastEnumerationProtocols.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>14BA571613DE457181C2DBEA</key>
+		<key>37F4D7C4B7204614AC7263B2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4C667ED7C45F46A6A75F7232</key>
+		<key>65908816526D4C42A7290FB5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>64166317EF90465E9A6CD104</key>
+		<key>8B2B36CDFFCE4F85873AEE75</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6A6E459D5F554DC1AD89B2C4</key>
+		<key>94DC17F8431740F3BE0F883F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7435F2F444EB4491850B2355</key>
+		<key>9B56A8497D274BE985ECB9F8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8F9FB4BC2B90409EA6204588</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>9E01401288FF48AE8F8D7F92</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C31914CDEBCD445CA504DCA1</key>
+		<key>CCC20F6BCE954CF3BEC61F5C</key>
 		<dict>
 			<key>primary</key>
 			<true/>

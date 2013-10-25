@@ -1,4 +1,13 @@
 #import "LUKeychainAccess.h"
+#import "LUKeychainServices.h"
+
+NSString *LUKeychainAccessErrorDomain = @"LUKeychainAccessErrorDomain";
+
+@interface LUKeychainAccess ()
+
+@property (nonatomic, strong) LUKeychainServices *keychainServices;
+
+@end
 
 @implementation LUKeychainAccess
 
@@ -8,6 +17,37 @@
   return [[self alloc] init];
 }
 
+- (id)init {
+  self = [super init];
+  if (!self) return nil;
+
+  _keychainServices = [LUKeychainServices keychainServices];
+
+  return self;
+}
+
+- (BOOL)deleteAll {
+  NSError *error;
+  BOOL result = [self.keychainServices deleteAllItemsWithError:&error];
+
+  if (!result) {
+    [self handleError:error];
+    return NO;
+  }
+
+  return YES;
+}
+
+#pragma mark - Properties
+
+- (LUKeychainAccessAccessibility)accessibilityState {
+  return self.keychainServices.accessibilityState;
+}
+
+- (void)setAccessibilityState:(LUKeychainAccessAccessibility)accessibilityState {
+  self.keychainServices.accessibilityState = accessibilityState;
+}
+
 #pragma mark - Getters
 
 - (BOOL)boolForKey:(NSString *)key {
@@ -15,22 +55,15 @@
 }
 
 - (NSData *)dataForKey:(NSString *)key {
-  if (!key) {
+  NSError *error;
+  NSData *data = [self.keychainServices dataForKey:key error:&error];
+
+  if (!data) {
+    [self handleError:error];
     return nil;
   }
 
-  NSMutableDictionary *query = [self queryDictionaryForKey:key];
-  query[(__bridge id)kSecMatchLimit] = (__bridge id)kSecMatchLimitOne;
-  query[(__bridge id)kSecReturnData] = (__bridge id)kCFBooleanTrue;
-
-  CFTypeRef result;
-  OSStatus error = SecItemCopyMatching((__bridge CFDictionaryRef)query, &result);
-
-  if (error == noErr) {
-    return CFBridgingRelease(result);
-  }
-
-  return nil;
+  return data;
 }
 
 - (double)doubleForKey:(NSString *)key {
@@ -48,22 +81,24 @@
 - (NSString *)stringForKey:(NSString *)key {
   NSData *data = [self dataForKey:key];
 
-  if (data) {
-    return [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-  }
+  if (!data) return nil;
 
-  return nil;
+  return [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 }
 
 - (id)objectForKey:(NSString *)key {
   NSData *data = [self dataForKey:key];
 
-  if (data) {
-    @try {
+  @try {
+    if (data) {
       return [NSKeyedUnarchiver unarchiveObjectWithData:data];
-    } @catch (NSException *e) {
-      NSLog(@"Unarchive of %@ failed: %@", key, e);
     }
+  } @catch (NSException *e) {
+    NSString *errorMessage = [NSString stringWithFormat:@"Error while calling objectForKey: with key %@: %@", key, [e description]];
+    NSError *error = [NSError errorWithDomain:LUKeychainAccessErrorDomain
+                                         code:LUKeychainAccessInvalidArchiveError
+                                     userInfo:@{NSLocalizedDescriptionKey: errorMessage}];
+    [self handleError:error];
   }
 
   return nil;
@@ -93,16 +128,15 @@
     return;
   }
 
-  NSMutableDictionary *query = [self queryDictionaryForKey:key];
-  query[(__bridge id)kSecValueData] = data;
+  NSError *error;
+  BOOL success = [self.keychainServices addData:data forKey:key error:&error];
+  if (!success && error.code == errSecDuplicateItem) {
+    error = nil;
+    success = [self.keychainServices updateData:data forKey:key error:&error];
+  }
 
-  OSStatus addStatus = SecItemAdd((__bridge CFDictionaryRef)query, NULL);
-
-  if (addStatus == errSecDuplicateItem) {
-    NSMutableDictionary *updateQuery = [NSMutableDictionary dictionary];
-    updateQuery[(__bridge id)kSecValueData] = data;
-
-    SecItemUpdate((__bridge CFDictionaryRef)query, (__bridge CFDictionaryRef)updateQuery);
+  if (!success) {
+    [self handleError:error];
   }
 }
 
@@ -129,22 +163,16 @@
 #pragma mark - Private Methods
 
 - (void)deleteObjectForKey:(NSString *)key {
-  if (key == nil) {
-    return;
+  NSError *error;
+  if (![self.keychainServices deleteItemWithKey:key error:&error]) {
+    [self handleError:error];
   }
-
-  NSMutableDictionary *query = [self queryDictionaryForKey:key];
-  SecItemDelete((__bridge CFDictionaryRef)query);
 }
 
-- (NSMutableDictionary *)queryDictionaryForKey:(NSString *)key {
-  NSMutableDictionary *query = [NSMutableDictionary dictionary];
-  query[(__bridge id)kSecClass] = (__bridge id)kSecClassGenericPassword;
-
-  NSData *encodedIdentifier = [key dataUsingEncoding:NSUTF8StringEncoding];
-  query[(__bridge id)kSecAttrAccount] = encodedIdentifier;
-  
-  return query;
+- (void)handleError:(NSError *)error {
+  if (self.errorHandler) {
+    [self.errorHandler keychainAccess:self receivedError:error];
+  }
 }
 
 @end

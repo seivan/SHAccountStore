@@ -6,19 +6,24 @@
 //  Copyright (c) 2013 Seivan Heidari. All rights reserved.
 //
 
-#import "UIAlertView+BlocksKit.h"
+#import <SHAlertViewBlocks.h>
 
-#import "LUKeychainAccess.h"
+#import <LUKeychainAccess.h>
 
 #import "SHAccountStore.h"
 
 #import "SHAccountType.h"
 #import "SHAccount.h"
 #import "SHAccountCredential.h"
-NSString * const SHAccountStoreDidChangeNotification = @"SHAccountStoreDidChangeNotification";
 
-NSString * const kAccountTypeDicitonaryKey    = @"kAccountTypeDicitonaryKey";
-NSString * const kAccountStoreDicitonaryKey   = @"kAccountStoreDicitonaryKey";
+#define SHStaticConstString(X) static NSString * const X = @#X
+
+//SHStaticConstString(SHAccountStoreDidChangeNotification);
+SHStaticConstString(SHAccountTypeDicitonaryKey);
+SHStaticConstString(SHAccountStoreDicitonaryKey);
+NSString * const SHAccountStoreDidChangeNotification = @"SH_AccountStoreDidChangeNotification";
+//NSString * const SHAccountTypeDicitonaryKey    = @"kAccountTypeDicitonaryKey";
+//NSString * const SHAccountStoreDicitonaryKey   = @"kAccountStoreDicitonaryKey";
 
 @protocol SHAccountTypePrivates <NSObject>
 @optional
@@ -62,7 +67,7 @@ NSString * const kAccountStoreDicitonaryKey   = @"kAccountStoreDicitonaryKey";
   NSAssert(identifier, @"Must pass identifier");
   __block SHAccount * chosenAccount = nil;
   LUKeychainAccess * keychain = [LUKeychainAccess standardKeychainAccess];
-  NSDictionary * accountStoreDictionary = [keychain objectForKey:kAccountStoreDicitonaryKey];
+  NSDictionary * accountStoreDictionary = [keychain objectForKey:SHAccountStoreDicitonaryKey];
   if(accountStoreDictionary == nil) accountStoreDictionary = @{};
   [accountStoreDictionary enumerateKeysAndObjectsUsingBlock:^(id _, NSSet * accountsSet, BOOL *stopDictionary) {
     [accountsSet enumerateObjectsUsingBlock:^(SHAccount * account, BOOL *stopSet) {
@@ -82,7 +87,7 @@ NSString * const kAccountStoreDicitonaryKey   = @"kAccountStoreDicitonaryKey";
   NSAssert(typeIdentifier, @"Must pass typeIdentifier");
   __block SHAccountType * accountTypeWithAccountTypeIdentifier = nil;
   LUKeychainAccess * keychain = [LUKeychainAccess standardKeychainAccess];
-  NSDictionary * accountTypeDictionary = [keychain objectForKey:kAccountTypeDicitonaryKey];
+  NSDictionary * accountTypeDictionary = [keychain objectForKey:SHAccountTypeDicitonaryKey];
   if(accountTypeDictionary == nil) accountTypeDictionary = @{};
   accountTypeWithAccountTypeIdentifier = accountTypeDictionary[typeIdentifier];
 
@@ -98,7 +103,7 @@ NSString * const kAccountStoreDicitonaryKey   = @"kAccountStoreDicitonaryKey";
   NSArray * accountsWithAccountType = nil;
   if(accountType.identifier != nil && accountType.accessGranted) {
     LUKeychainAccess * keychain = [LUKeychainAccess standardKeychainAccess];
-    NSDictionary * accountStoreDictionary = [keychain objectForKey:kAccountStoreDicitonaryKey];
+    NSDictionary * accountStoreDictionary = [keychain objectForKey:SHAccountStoreDicitonaryKey];
     if(accountStoreDictionary == nil) accountStoreDictionary = @{};
     NSSet * accountsSet = accountStoreDictionary[accountType.identifier];
     accountsWithAccountType = accountsSet.allObjects;
@@ -109,7 +114,7 @@ NSString * const kAccountStoreDicitonaryKey   = @"kAccountStoreDicitonaryKey";
 -(NSArray *)accounts; {
   NSMutableArray * accounts = @[].mutableCopy;
   LUKeychainAccess * keychain = [LUKeychainAccess standardKeychainAccess];
-  NSDictionary * accountStoreDictionary = [keychain objectForKey:kAccountStoreDicitonaryKey];
+  NSDictionary * accountStoreDictionary = [keychain objectForKey:SHAccountStoreDicitonaryKey];
   if(accountStoreDictionary == nil) accountStoreDictionary = @{};
   [accountStoreDictionary enumerateKeysAndObjectsUsingBlock:^(id _, NSSet * accountsSet, BOOL *__) {
     [accounts addObjectsFromArray:accountsSet.allObjects];
@@ -125,7 +130,7 @@ NSString * const kAccountStoreDicitonaryKey   = @"kAccountStoreDicitonaryKey";
     NSAssert(account.accountType, @"account must have accountType");
 
     LUKeychainAccess * keychain = [LUKeychainAccess standardKeychainAccess];
-    NSDictionary * accountStoreDictionary = [keychain objectForKey:kAccountStoreDicitonaryKey];
+    NSDictionary * accountStoreDictionary = [keychain objectForKey:SHAccountStoreDicitonaryKey];
     if(accountStoreDictionary == nil) accountStoreDictionary = @{};
 
     //Get two copies of accounts, mutable and immutable
@@ -139,7 +144,7 @@ NSString * const kAccountStoreDicitonaryKey   = @"kAccountStoreDicitonaryKey";
       [accountsChangesSet enumerateObjectsUsingBlock:^(SHAccount * existingAccountToDelete, BOOL *stop) {
         if([existingAccount.identifier isEqualToString:existingAccountToDelete.identifier]) {
           existingAccount = existingAccountToDelete;
-          stop = YES;
+          *stop = YES;
         }
       }];
       [accountsChangesSet removeObject:existingAccount];
@@ -152,7 +157,7 @@ NSString * const kAccountStoreDicitonaryKey   = @"kAccountStoreDicitonaryKey";
     //Sync back new sets of accounts back to the dictionary
     accountStoreChangeDictionary[account.accountType.identifier] = accountsChangesSet;
 
-    [keychain setObject:accountStoreChangeDictionary forKey:kAccountStoreDicitonaryKey];
+    [keychain setObject:accountStoreChangeDictionary forKey:SHAccountStoreDicitonaryKey];
     isSuccess = YES;
 
     //Notify that changes have been made, and user should purge all accounts and accountTypes
@@ -192,27 +197,28 @@ NSString * const kAccountStoreDicitonaryKey   = @"kAccountStoreDicitonaryKey";
     if(customMessage[@"message"]) alertMessage = customMessage[@"message"];
   }
   
-  UIAlertView * alert = [UIAlertView alertViewWithTitle:alertTitle message:alertMessage];
+  UIAlertView * alert = [UIAlertView SH_alertViewWithTitle:alertTitle withMessage:alertMessage];
   LUKeychainAccess * keychain = [LUKeychainAccess standardKeychainAccess];
-  NSDictionary * accountTypeDictionary = [keychain objectForKey:kAccountTypeDicitonaryKey];
+  NSDictionary * accountTypeDictionary = [keychain objectForKey:SHAccountTypeDicitonaryKey];
 
   if(accountTypeDictionary == nil) accountTypeDictionary = @{};
   NSMutableDictionary * accountTypeChangesDictionary = accountTypeDictionary.mutableCopy;
 
 
-  [alert addButtonWithTitle:@"Allow" handler:^{
+  [alert SH_addButtonWithTitle:@"Allow" withBlock:^(NSInteger theButtonIndex) {
+
     isSuccess = YES;
 
     accountType.accessGranted = isSuccess;
     accountTypeChangesDictionary[accountType.identifier] = accountType;
 
-    [keychain setObject:accountTypeChangesDictionary.copy forKey:kAccountTypeDicitonaryKey];
+    [keychain setObject:accountTypeChangesDictionary.copy forKey:SHAccountTypeDicitonaryKey];
 
     [NSNotificationCenter.defaultCenter postNotificationName:SHAccountStoreDidChangeNotification object:nil];
     completionHandler(isSuccess, error);
   }];
 
-  [alert addButtonWithTitle:@"Deny" handler:^{
+  [alert SH_addButtonCancelWithTitle:@"Deny" withBlock:^(NSInteger theButtonIndex) {
     isSuccess = NO;
     completionHandler(isSuccess, error);
   }];

@@ -1,24 +1,26 @@
-
 PODS:
-- BlocksKit (1.8.1):
-  - libffi
-- LUKeychainAccess (1.0.1)
-- SHAccountStore (0.0.1):
-  - BlocksKit
-  - LUKeychainAccess
-- libffi (3.0.11)
+  - LUKeychainAccess (1.2.0)
+  - SHAccountStore (0.1.1):
+    - LUKeychainAccess
+    - SHAlertViewBlocks
+  - SHActionSheetBlocks (2.2.0)
+  - SHAlertViewBlocks (1.1.0)
+  - SHFastEnumerationProtocols (1.3.0)
 
 DEPENDENCIES:
-- SHAccountStore (from `../')
+  - SHAccountStore (from `../`)
+  - SHActionSheetBlocks
+  - SHFastEnumerationProtocols
 
 EXTERNAL SOURCES:
   SHAccountStore:
-    :local: ../
+    :path: ../
 
 SPEC CHECKSUMS:
-  BlocksKit: 18102744fd7c44b54f1e54ce6ffe9258bcb5df81
-  LUKeychainAccess: 6ba22b2e1eec24f9f2fc9c6a9087d5524a58b1a2
-  SHAccountStore: 01e8fe952eaa7710bab36d93faed51a2b9535d4b
-  libffi: 8a1d9ba43c0c84b546b42c6f742714e73aa07ae1
+  LUKeychainAccess: 87c5398528278a5f24956b61bb459ea97bd93b6a
+  SHAccountStore: abab60e1e508ede71fb52e5b7806b7d53c9c4188
+  SHActionSheetBlocks: 2656692a5da00e3f4a310e8fcfff4731f5afd594
+  SHAlertViewBlocks: ba88a9c577c521ed79443771f7422ed555778a16
+  SHFastEnumerationProtocols: b83587ae41c1990851bcd675da01636a1b2addc8
 
-COCOAPODS: 0.16.4
+COCOAPODS: 0.26.2

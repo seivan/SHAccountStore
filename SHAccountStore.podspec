@@ -25,5 +25,5 @@ Pod::Spec.new do |s|
   s.source_files = 'SHAccountStore/**/*.{h,m}'
   s.requires_arc = true
   s.dependency 'LUKeychainAccess'
-  s.dependency 'BlocksKit'
+  s.dependency 'SHAlertViewBlocks'
 end
