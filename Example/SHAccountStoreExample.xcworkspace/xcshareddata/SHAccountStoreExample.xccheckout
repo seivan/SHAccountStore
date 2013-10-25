@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D11780CC-8D86-40C1-97B8-47000A6ED501</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SHAccountStoreExample</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>16A0A212-7A4A-4E1B-84D4-CA4AFEE2534F</key>
+		<string>ssh://github.com/seivan/SHAccountStore.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Example/SHAccountStoreExample.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>16A0A212-7A4A-4E1B-84D4-CA4AFEE2534F</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/seivan/SHAccountStore.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>16A0A212-7A4A-4E1B-84D4-CA4AFEE2534F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>16A0A212-7A4A-4E1B-84D4-CA4AFEE2534F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SHAccountStore</string>
+		</dict>
+	</array>
+</dict>
+</plist>
